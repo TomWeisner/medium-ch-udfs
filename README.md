@@ -2,14 +2,14 @@
 
 This repo provides code and figures used in [this Medium story](https://medium.com/@tomweisner/user-defined-functions-in-clickhouse-with-python-c3f7724bd6de?source=friends_link&sk=806e2cab9eb4755746a358f11aa42c57)
 
-## pre-reqs
+## Pre-reqs
 
 - Linux OS
 - python3
 - A virtual environment
 - Installed third party packages. See requirements.txt
 
-## usage guide
+## Usage guide
 
 Simply execute src/plotActivity.py
 

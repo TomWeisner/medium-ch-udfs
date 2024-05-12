@@ -1,0 +1,18 @@
+<functions>
+    <function>
+        <type>executable</type>
+        <name>findActivity</name>
+        <return_type>Array(Array(String))</return_type>
+        <return_name>result</return_name>
+        <argument>
+            <type>Array(DateTime64)</type>
+            <name>readingDates</name>
+        </argument>
+        <argument>
+            <type>Array(Float32)</type>
+            <name>values</name>
+        </argument>
+        <format>JSONEachRow</format>
+        <command>findActivity.py</command>
+    </function>
+</functions>

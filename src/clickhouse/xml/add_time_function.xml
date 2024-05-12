@@ -1,0 +1,22 @@
+<functions>
+    <function>
+        <type>executable</type>
+        <name>add_x_time</name>
+        <return_type>String</return_type>
+        <return_name>result</return_name>
+        <argument>
+            <type>Float64</type>
+            <name>number</name>
+        </argument>
+        <argument>
+            <type>String</type>
+            <name>time_unit</name>
+        </argument>
+        <argument>
+            <type>DateTime64</type>
+            <name>date</name>
+        </argument>
+        <format>JSONEachRow</format>
+        <command>add_time.py</command>
+    </function>
+</functions>

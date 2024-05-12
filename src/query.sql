@@ -10,5 +10,5 @@ select arrayMap(x -> toDateTime(x), dates) as d -- convert strings to datetimes
      )
     -- arrayJoin puts each nested array on it's own line
     -- we then format activity output strings to dates and then map dates to desired time string formats
-select arrayMap(x -> formatDateTime(toDateTime(x), '%H:%m'), arrayJoin(a)) as periods
+select arrayMap(x -> formatDateTime(toDateTime(x), '%H:%i'), arrayJoin(a)) as periods
   from base

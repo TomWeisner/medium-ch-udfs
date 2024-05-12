@@ -1,7 +1,7 @@
 <functions>
     <function>
         <type>executable</type>
-        <name>findActivity</name>
+        <name>activity</name>
         <return_type>Array(Array(String))</return_type>
         <return_name>result</return_name>
         <argument>

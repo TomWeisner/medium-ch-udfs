@@ -10,7 +10,7 @@ from src.data.plotGenerate import plot
 
 if __name__ == '__main__':
     times, heart_rates = gen_data()
-    activity_indexes, _ = find_activity(times, heart_rates)
+    activity_indexes, activity_times = find_activity(times, heart_rates)
     fig, ax = plot(times, heart_rates)
     for i, a in enumerate(activity_indexes):
         peak = a[-1]

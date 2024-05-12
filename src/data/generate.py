@@ -40,3 +40,8 @@ def gen_data() -> Tuple[List[datetime], List[float]]:
         heart_rates = [x + y for x, y in zip(heart_rates, heart_rates_activity)]
 
     return times, heart_rates
+
+if __name__ == '__main__':
+    t, h = gen_data()
+    t2 = [ti.strftime('%Y-%m-%d %H:%M:%S') for ti in t]
+    h2 = [round(hi, 2) for hi in h]

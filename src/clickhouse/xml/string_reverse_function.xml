@@ -1,0 +1,12 @@
+<functions>
+    <function>
+        <type>executable</type>
+        <name>revString</name>
+        <return_type>String</return_type>
+        <argument>
+            <type>String</type>
+        </argument>
+        <format>TabSeparated</format>
+        <command>revString.py</command>
+    </function>
+</functions>

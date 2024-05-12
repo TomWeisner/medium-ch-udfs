@@ -10,7 +10,7 @@ from scipy.signal import find_peaks, peak_widths
 
 
 def find_activity(dts: List[datetime], y: List[float]) -> Tuple[List[List[int]], List[List[str]]]:
-    """ main method for finding elevated heart activity """
+    """ main method for finding elevated heart rate activity """
     y = np.array(y)
     peaks, x = find_peaks(y, height=25, distance=2, prominence=5)
     peaks_rev, x = find_peaks(-y, distance=2, prominence=1)
@@ -22,6 +22,7 @@ def find_activity(dts: List[datetime], y: List[float]) -> Tuple[List[List[int]],
     pairs = list(list(a) for a in zip(left, right))
     peaks = peaks.tolist()
 
+    # clean up overlapping periods
     for i, p in enumerate(pairs):
         left = p[0]
         if i > 0 and (p[0] < [pairs[x][1] for x in range(0, i)]).any():
@@ -29,6 +30,7 @@ def find_activity(dts: List[datetime], y: List[float]) -> Tuple[List[List[int]],
         right = peaks[i]
         pairs[i] = [left, right]
 
+    # extract when and where activity is
     all_positions, all_times = [], []
     for i, p in enumerate(pairs):
         if p is None:
@@ -51,10 +53,7 @@ if __name__ == '__main__':
         values = inputs['values']
         dates = [datetime.strptime(d, '%Y-%m-%d %H:%M:%S') for d in inputs['readingDates']]
 
-        try:
-            _, r = find_activity(dates, values)
-        except:
-            r = [[]]
+        _, r = find_activity(dates, values)
 
         result = json.dumps({'result': r})
         print(result, end='\n')

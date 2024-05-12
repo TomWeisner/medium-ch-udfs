@@ -1,0 +1,10 @@
+# apt update
+# apt install python3.10
+# python -m ensurepip --upgrade
+# pip install --upgrade pip
+# pip install -r requirements.txt --retries 1
+
+scipy==1.13.0
+numpy==1.26.4
+matplotlib==3.8.4
+pyqt5

@@ -16,7 +16,7 @@ if __name__ == '__main__':
         peak = a[-1]
         Y = heart_rates[peak]
         X = [times[a[0]], times[a[1]]]
-        ax.plot(times[peak], heart_rates[peak], 'rx', markersize=10, label='Peak' if i == 0 else '')  # only one label
+        ax.plot(times[peak], Y, 'rx', markersize=10, label='Peak' if i == 0 else '')  # only one label
         ax.fill_between(X, Y, 60, alpha=0.3, color='green', label='Activity' if i == 0 else '')
 
         avg_activity_time = datetime.fromtimestamp(np.mean([dt.timestamp() for dt in X]))

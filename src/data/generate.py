@@ -18,15 +18,15 @@ def gen_data() -> Tuple[List[datetime], List[float]]:
     base_heart_rate = 65  # bpm
 
     activities = [
-        # how far into day, std, peak height above base, slant
-        {'when': 0.00 * n, 'duration': 17, 'size': 3, 'skew': -2},
-        {'when': 0.25 * n, 'duration': 15, 'size': 10, 'skew': -4},
-        {'when': 0.30 * n, 'duration': 5,  'size': 50, 'skew': 4},
-        {'when': 0.50 * n, 'duration': 3,  'size': 25, 'skew': 4},
-        {'when': 0.50 * n, 'duration': 15, 'size': 10, 'skew': 2},
-        {'when': 0.70 * n, 'duration': 2,  'size': 70, 'skew': 2},
-        {'when': 0.70 * n, 'duration': 15, 'size': 10, 'skew': 2},
-        {'when': 0.80 * n, 'duration': 25, 'size': 10, 'skew': -2}
+        # how far into day, std, peak height above base
+        {'when': 0.00 * n, 'duration': 17, 'size': 3 },
+        {'when': 0.25 * n, 'duration': 15, 'size': 10},
+        {'when': 0.30 * n, 'duration': 5,  'size': 50},
+        {'when': 0.50 * n, 'duration': 3,  'size': 25},
+        {'when': 0.50 * n, 'duration': 15, 'size': 10},
+        {'when': 0.70 * n, 'duration': 2,  'size': 70},
+        {'when': 0.70 * n, 'duration': 15, 'size': 10},
+        {'when': 0.80 * n, 'duration': 25, 'size': 10}
 
     ]
 
